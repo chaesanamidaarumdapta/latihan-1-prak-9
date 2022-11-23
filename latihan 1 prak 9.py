@@ -1,0 +1,21 @@
+def masukkan_file():
+    nama = str(input("Masukan Nama mu: "))
+    umur = int(input("Masukan Umur mu: "))
+    alamat = str(input("Masukan Alamat mu: "))
+    email = str(input("Masukan Email mu: "))
+    dosen = str(input("Masukan Dosen Wali mu: "))
+    file= open("Biodata.txt", "w")
+    file.write(f'Nama:{nama}\nUmur:{umur}\nAlamat:{alamat}\nEmail:{email}\nDosen:{dosen}')
+    file.close()
+a = masukkan_file()
+print(a)
+
+def output_file():
+    file = open("Biodata.txt", "r")
+    text = file.read()
+    print()
+    print("Berikut Ini Data Kamu")
+    print(text)
+    file.close()
+b = output_file()
+print(b)
